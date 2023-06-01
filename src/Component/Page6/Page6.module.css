@@ -33,14 +33,15 @@
     width: 30%;
     margin: 10px;
     text-align: center;
-    background-color: #FFA500;
+    background: linear-gradient(90deg, red, black);
+    animation: animation 3s infinite ease-in-out;
     font-Family: "Arial Black", Gadget, sans-serif;
     font-weight: 500;
   }
 
   .card:hover{
-     background-color: red;
-     color:#fff
+    background: linear-gradient(90deg, blue, black);
+    animation: animation 3s infinite ease-in-out;
   }
   
   .cardImg {
@@ -61,7 +62,9 @@
   }
   .cardH{
     text-align: justify;
+    color: #fff;
+    opacity: 0.8;
   }
   .card:hover .cardH{
-    color: #fff;
+    opacity: 1;
   }
