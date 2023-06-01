@@ -1,0 +1,311 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  transition: background-color 0.1s;
+  background: linear-gradient(90deg, red, black);
+  animation: animation 3s infinite ease-in-out;
+}
+
+.textMain {
+  background: linear-gradient(to right, white, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.nav {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+
+
+}
+
+
+.navLink {
+  color: yellow;
+  padding-left: 60px;
+  text-decoration: none;
+  opacity: 0.8;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.navLink:hover {
+  color: white;
+  opacity: 1;
+}
+
+
+
+.zoomImage {
+  position: relative;
+}
+
+.zoomImage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  /* Початковий колір маски - прозорий */
+  opacity: 1;
+  /* Початкова прозорість маски (1 - повністю непрозорий) */
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  /* Анімація зміни прозорості та кольору маски з тривалістю 0.3 секунди та ефектом ease-in-out */
+  pointer-events: none;
+  /* Відключаємо можливість взаємодії з маскою */
+}
+
+.zoomImage:hover::before {
+  background-color: black;
+  /* Змінюємо колір маски на чорний при наведенні */
+  opacity: 0.8;
+  /* Змінюємо прозорість маски при наведенні (0.7 - 70% непрозорий) */
+}
+
+.zoomImage {
+  position: relative;
+  opacity: 1;
+  /* Початкова прозорість (1 - повністю непрозорий) */
+  transition: opacity 0.9s ease-in-out;
+  /* Анімація зміни прозорості з тривалістю 0.3 секунди та ефектом ease-in-out */
+}
+
+.zoomImage:hover {
+  opacity: 1;
+  /* Змінюємо прозорість при наведенні (0.7 - 70% непрозорий) */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.zoomImage:hover .text {
+  opacity: 1;
+  /* Змінюємо прозорість тексту при наведенні (1 - повністю непрозорий) */
+}
+
+.text {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Початкова прозорість тексту (0 - повністю прозорий) */
+  transition: opacity 0.3s ease-in-out;
+  /* Анімація зміни прозорості тексту з тривалістю 0.3 секунди та ефектом ease-in-out */
+
+  /* Колір фону маски - чорний */
+  color: #fff;
+  /* Колір тексту - білий */
+  padding: 10px;
+  /* Додавання внутрішнього відступу тексту */
+}
+
+.cardContainer {
+  display: flex;
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+.card {
+  margin-left: 10px;
+  width: 33.3333%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 700px;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  opacity: 0;
+}
+
+.card {
+  opacity: 1;
+}
+
+.cardImgTop {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.cardBody {
+  padding: 20px;
+  text-align: center;
+}
+
+.cardTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cardText {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.btn {
+  font-size: 44px;
+  margin-top: 30px;
+  width: 300px;
+  text-align: 'center';
+  justify-content: 'center';
+  align-items: 'center';
+  border-radius: 30px;
+  font-family: Helvetica, sans-serif;
+
+  background-color: cyan;
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+
+}
+
+.btn:hover {
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+
+}
+
+.card2 {
+  color: #fff;
+  margin-left: 10px;
+  padding-right: 5px;
+  width: 33.3333%;
+  display: flex;
+  flex-direction: column;
+  height: 950px;
+  background-color: black;
+  border-radius: 50px;
+  overflow: hidden;
+  position: relative;
+  transition: opacity .5s ease-in-out;
+  filter: brightness(50%);
+}
+
+.card2:hover {
+  filter: brightness(100%);
+  cursor: pointer;
+
+}
+
+
+
+.card2 .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+  text-align: center;
+}
+
+.card2 .content {
+  opacity: 1;
+}
+
+.textTitle2 {
+  text-align: center;
+  color: #fff;
+}
+
+.cardStyle {
+  text-align: justify;
+  padding-left: 10px;
+}
+
+.cardImg2:hover {
+  transform: scale(1.1);
+  /* збільшення картинки на 10% */
+  transition: transform 1.3s ease;
+  /* плавний перехід ефекту протягом 0.3 секунд */
+}
+
+
+.btn2 {
+  text-decoration: none;
+  font-size: 44px;
+  margin-top: 30px;
+  width: 300px;
+  text-align: 'center';
+  justify-content: 'center';
+  align-items: 'center';
+  border-radius: 15px;
+  font-family: Helvetica, sans-serif;
+}
+
+.btn2:hover {
+  background-color: black;
+  color: red;
+}
+
+.fontH2 {
+  font-size: 44px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .zoomImage {
+    width: 100%;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .zoomImage {
+    height: 50vh;
+
+  }
+
+  img {
+    height: 400px;
+  }
+
+  .fontH {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .zoomImage {
+    height: 40vh;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+}
+
+
+/* Для екранів з шириною менше 768px */
+@media screen and (max-width: 768px) {
+  .zoomImage {
+    width: 100%;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+}
+
+/* Для екранів з шириною менше 480px */
+@media screen and (max-width: 480px) {
+  .zoomImage {
+    height: 40vh;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+}

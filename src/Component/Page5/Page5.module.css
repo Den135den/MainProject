@@ -1,0 +1,13 @@
+.timerContainer{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: black;
+   height: 200px;
+}
+
+
+.timer{
+     color: white;
+     font-size: 180px;
+}

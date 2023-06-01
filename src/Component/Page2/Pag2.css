@@ -1,0 +1,39 @@
+.contentMain {
+    display: flex;
+    padding-top: 100px;
+    background-color: black;
+  }
+  
+  .contentWidth {
+    flex-basis: 50%;
+  }
+  
+  .img {
+    max-width: 100%;
+    height: auto; 
+    opacity: 0;
+  }
+  
+  .contentMain:hover .img {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+  }
+  
+  .content {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0; /* Початкове значення прозорості 0 */
+    transform: translateY(-100%); /* Початкове значення позиції зверху */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Додано анімацію */
+  }
+  
+  .contentWidth:hover .content {
+    transform: translateY(0); /* Значення позиції внизу при наведенні */
+    opacity: 1; /* Прозорість 100% при наведенні */
+  }
+  
