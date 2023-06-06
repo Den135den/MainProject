@@ -44,7 +44,7 @@ export default class IFORMATION extends Component {
             React.createElement(
                 "div",
                 { className: style.card2 },
-                React.createElement("h1", { className: style.textTitle2 }, "John Doe"),
+                React.createElement("h1", { className: style.textTitle2 }, "Franz Muller"),
                 React.createElement("img", { src: img2, className: style.cardImg2, alt: "Зображення тренера" }),
                 React.createElement(
                     "div",
@@ -76,7 +76,7 @@ export default class IFORMATION extends Component {
             React.createElement(
                 "div",
                 { className: style.card2 },
-                React.createElement("h1", { className: style.textTitle2 }, "John Doe"),
+                React.createElement("h1", { className: style.textTitle2 }, "Barvin Quinn"),
                 React.createElement("img", { src: img3, className: style.cardImg2, alt: "Зображення тренера" }),
                 React.createElement(
                     "div",
