@@ -1,6 +1,5 @@
 .contentMain {
   display: flex;
-  
   background-color: black;
 }
 
@@ -10,7 +9,7 @@
 
 .img {
   max-width: 100%;
-  height: auto; 
+
   opacity: 0;
 }
 
@@ -38,3 +37,6 @@
   transform: translateY(0); /* Значення позиції внизу при наведенні */
   opacity: 1; /* Прозорість 100% при наведенні */
 }
+
+
+

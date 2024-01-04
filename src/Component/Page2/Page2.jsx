@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import style from '../Page2/Page2.module.css';
+import  '../Page2/Page2.css';
 import img from '../../img/4.jpg';
 import { masData2 } from '../../data.js';
 
@@ -19,18 +19,18 @@ export default class Page2 extends Component {
         >
           TIPS FOR RESILIENCE
         </div>
-        <div className={style.contentMain}>
-          <div className={style.contentWidth}>
-            <img src={img} alt="Картинка" className={style.img} />
+        <div className= "contentMain">
+          <div className="contentWidth">
+            <img src={img} alt="Картинка" className="img"/>
           </div>
           <div style={{ display: 'grid', placeItems: 'center' }}>
-            <div className={style.contentWidth}>
-              <div className={style.content}>
-                <div className={style.contentText}>
-                  <div style={{ fontWeight: '900' }}>
+            <div className="contentWidth">
+              <div className="content">
+                <div className="contentText">
+                  <div style={{ fontWeight: '900' }} className='textTitle'>
                     {this.props.title.toUpperCase()}
                   </div>
-                  <ol>{masData2}</ol>
+                  <ol className="textContent">{masData2}</ol>
                 </div>
               </div>
             </div>

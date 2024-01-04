@@ -1,3 +1,5 @@
+import './Component/Page2/Page2.css'
+
 let masData = [
     { name: `Don't give up on your goals, your body deserves the best`, id: 1 },
     { name: `Stronger, better, faster - that's your way to achieving your goals in the gym!`, id: 2 },
@@ -11,7 +13,7 @@ let masData = [
     { name: `Remember, every workout day is an opportunity to become a better version of yourself`, id: 10 }
   ]
 
-export  let masData2 = masData.map((value, id)=><li key={id} style={{textAlign:'justify', fontFamily:'Georgia, serif', fontSize:'18px', lineHeight:'28px'}}>{value.name}</li>)
+export  let masData2 = masData.map((value, id)=><li key={id} className='textContent'>{value.name}</li>)
 
 
 
